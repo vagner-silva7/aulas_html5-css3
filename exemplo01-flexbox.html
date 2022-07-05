@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flexbox</title>
+
+<style>
+
+/* css interno */
+*, *::before, *::after { box-sizing: border-box; }
+
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+/* id Pai - Flex container */
+#exemplo {
+    border: solid 2px red;
+    width: 70%;
+    height: 200px;
+    margin: auto;
+
+    /* Habilitando o flex box, colocando as caixas lado a lado */
+    display: flex;
+
+    /* Alinhamento, colocando lado a lado, à esquerda da pagina */
+    /* justify-content: flex-end; */
+    
+    /* Alinhamento, colocando lado a lado, à direita da pagina */
+    /* justify-content: flex-start; */
+    
+    /* Alinhamento, colocando lado a lado, cria espaço entre as caixas da pagina */        
+    /* justify-content: space-around; */
+
+    /* Alinhamento, colocando lado a lado, cria espaço entre as caixas da pagina igualmente*/        
+    justify-content: space-evenly;
+
+    
+    /* Alinhamento, colocando lado a lado, em cima da pagina */
+    /* align-items: flex-start; */
+    
+    /* Alinhamento, colocando lado a lado, em baixo da pagina */
+    /* align-items: flex-end;  */
+
+    /* Alinhamento, colocando lado a lado, em baixo da pagina */
+    align-items: center;
+
+    /* Coloca as caixas numa segunda linha */
+    flex-wrap: wrap;
+}
+
+.caixas {
+    width: 100px;
+    height: 50px;
+    background-color: yellow;
+    border: solid 1px black;
+}
+
+#um {
+    background-color: orange;
+    width: 150 px;
+}
+
+#dois {
+    background-color: green;
+    width: 150px;
+}
+
+</style>
+</head>
+<body>
+    <h1>Alinhamento de elementos e conteúdo com Flexbox</h1>
+    <hr>
+    <p>Flexbox é um mecanismo CSS3 que permite aplicar alinhamento, espaçamento e distribuição de elementos no HTML.</p>
+
+    <h2>Exemplo</h2>
+
+    <!-- div#exemplo representa div id="exemplo" -->
+    <div id="exemplo">
+
+        <!-- div.caixas*3 representa 3 div com mesmo nome-->
+        <div class="caixas" id="um">UM</div>
+        <div class="caixas" id="dois">DOIS</div>
+        <div class="caixas">TRÊS</div>
+
+        <div class="caixas">QUATRO</div>
+        <div class="caixas">CINCO</div>
+        <div class="caixas">SEIS</div>
+
+    </div>
+
+    
+
+</body>
+</html>

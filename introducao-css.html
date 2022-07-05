@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introdução ao CSS</title>
+
+        <!-- CSS interno - tag <style> muda caracteristica de toda a pagina do html -->
+        <style>
+            /* regra CSS */
+            /* seletor tag {propriedade: valor} */
+        
+            p {
+                color: purple;
+            }
+        
+            h2 {
+                text-align: center;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+                /* versão detalhada */
+                border-top-width: 2px;
+                border-top-style: solid;
+                border-top-color: red;
+                border-bottom-width: 4px;
+                border-bottom-style: double;
+                border-bottom-color: orange;
+        
+                /* versão abreviada */
+                /* border-top: 2px solid red; */
+                /* border-bottom: 4px double orange; */
+            }
+
+            /* Exercício */
+
+            /* 1) Crie uma regra CSS para a tag body e nela altere a cor do plano de fundo ( cor de preferência ) */
+            
+            body {background-color: aquamarine;}
+            
+            /* 2) Crie uma regra CSS para a tag h1 e nela altere:
+            - cor do plano de fundo ( um tom escuro )
+            - cor do texto ( um tom claro )
+            - fonte impact 
+            - alinhamento centralizado
+            - cantos arredondados
+            - espaçamento de letras
+            - tirar negrito
+             */
+
+            h1 { 
+               background-color: darkblue;
+               color: white; 
+               font-family: Impact;
+               text-align: center;  
+               border-radius: 10px;  
+               letter-spacing: 3px; 
+               font-weight: normal;    
+            }
+
+
+        </style>
+
+</head>
+<body>
+
+    <h1>Trabalhando com CSS e HTML</h1>
+    <hr>
+
+        <h2>HTML</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. .</p>
+            
+            <!-- CSS inline ou linha - atributo style="" ou caracteristicas do html-->
+            <!-- 2 propriedades alterardas color e text-align -->
+            <p style="color: red;text-align: right;">Lorem ipsum dolor sit amet.</p>
+
+        <h2>CSS</h2>
+            <!-- CSS inline ou linha- atributo style="" ou caracteristicas do html-->
+            <!-- 2 propriedades alterardas color e text-align -->    
+            <p style="color: red;text-align: right;">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, illo.</p>
+
+         <h2>JS</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. !</p>
+    
+</body>
+</html>

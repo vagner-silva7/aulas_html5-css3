@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>usando-imagens</title>
+</head>
+<body>
+
+    <p><a href="links.html">Voltar para pagina de links </a>
+    
+    </p>
+ 
+    <!-- body representa o corpo/texto da pagina -->
+    <!-- h1 representa o primeiro texto em destaque -->
+    <!-- h2 a h6 representa textos secundarios em destaque -->
+    
+    <h1>Trabalhando com imagens</h1>
+    
+    <!-- Hr representa uma linha no texto -->
+    <hr>
+        
+        <!-- p representa novo paragrafo -->
+    
+        <p>Formatos mais comuns de imagens para a web</p>
+        
+        <!-- atalho - ul>li*4 - cria lista não-ordenada com 4 itens -->
+        
+        <!-- ul - unorderer list -->
+        
+        <ul>
+            <li>JPEG/JPG</li>
+            <li>PNG</li>
+            <li>GIF</li>
+            <li>SVG</li>
+        </ul>
+
+     <H2>Exemplos:</H2>  
+     
+     <!-- tag <img> representa inclusão de imagens, acompanhadas por dois atributos srd="" e alt"" -->
+
+     <!-- atributo src representa (source) ou seja,  caminho da pasta -->
+
+     <!-- atributo alt representa (alternative text) ou seja texto alternativo, ou seja o chrome ou outro navegador, lê para o deficiente com ferramenta de acessibilidade -->
+
+     <img src="imagens/pink-floyd.jpg" alt="integrantes da Banda Pink Floyd acenando para o público">
+
+            <!-- Area de conteudo grafico (imagem) sem legenda -->          
+            <p>
+               
+                <img src="imagens/stonehenge.jpg" 
+                alt="Ruínas antigas do stonehenge">
+           
+            </p>
+
+            <!-- Area de conteudo grafico (imagem) com legenda -->
+            <figure>
+                
+                <img src="imagens/stonehenge.jpg" alt="Ruinas antigas do stonehenge">
+                
+                <figcaption>Foto do pôr do sol retirada durante as férias no stonehenge
+                </figcaption>
+
+            </figure>
+
+            <!-- Area de conteudo com 3 grafico (com 3 imagens) com legenda -->
+            <figure>
+                
+                <img src="imagens/logo-html5.png" alt="Logo HTML5">
+                <img src="imagens/logo-css3.gif" alt="Logo CSS3">
+                <img src="imagens/logo-javascript.gif" alt="Logo JavaScript">
+
+                <figcaption>Tecnologias do mundo front-end
+                </figcaption>
+
+            </figure>
+
+            <!-- imagem gif animado -->
+            <img src="imagens/computer.gif" alt="Personagem trabalhando e batendo no computador">
+
+            <!-- imagem Bitmap -->
+            <img src="imagens/black-cat.png" alt="Gato parado">
+
+            <!-- imagem vetor -->
+            <img src="imagens/black-cat.svg" alt="Gato parado">
+
+</body>
+</html>

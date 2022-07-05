@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Layout</title>
+<style>
+
+/* Regras de uso geral - css interno*/
+/* O que codificamos aqui, é tudo que será usado no site não importando o tamanho da tela. Neste momento, não usamos media queries */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* referencia para o uso da medida REM - padrão 16px*/
+html {font-size: 15px;}
+
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+#container {
+    box-shadow: black 0 0 5px;
+    padding: 5px;
+}
+
+header {
+    background-color: dodgerblue;
+    text-align: center;
+    height: 100px;
+}
+
+/* CSS Reset - remoção de valores padrão*/
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {font-size: 2rem;}
+h2 {font-size: 1.2rem;}
+p {font-size: 1.1rem;}
+
+nav { background-color: yellow;}
+
+article {padding: 5px;}
+
+#coluna-um {background-color: darkseagreen;}
+#coluna-dois {background-color: orange;}
+#coluna-tres {background-color: salmon;}
+
+footer { background-color: gray;}
+
+/* Regras para design responsive */
+/* media query */
+
+/* 1a. media query - telas a partir de 822px de largura */
+@media screen and (min-width: 822px) { 
+    
+    /* Habilitar a opção de font size da raiz de 15 para 20, que alterará a fonte REM */
+    html {font-size: 20px;}
+
+    /* habilitando flexbox na tag main, em telas a partir de 822px */
+    /* a tela ficará com 3 itens lado a lado */
+    main {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+
+    /* usando seletores id, para somente os 3 artigos */
+    #coluna-um, #coluna-dois, #coluna-tres {width: 33.33%}
+
+    /* usando seletor tag, vale para todos artigos, porem se houver depois outro artigo, ele entrará nesta regra. */
+    /* article { width: 33.33%; } */
+
+}
+
+/* 2a. media query - telas a partir de 1200px de largura */
+@media screen and (min-width: 1200px) { 
+    
+    /* Habilitar a opção de font size da raiz de 15 para 20, que alterará a fonte REM */
+    html {font-size: 20px;}
+
+    /* habilitando flexbox na tag main, em telas a partir de 700px */
+    /* a tela ficará com 3 itens lado a lado */
+    main {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+
+    /* usando seletores id, para somente os 3 artigos */
+    #coluna-um, #coluna-dois, #coluna-tres {width: 33.33%}
+
+    /* usando seletor tag, vale para todos artigos, porem se houver depois outro artigo, ele entrará nesta regra. */
+    /* article { width: 33.33%; } */
+
+    #container {
+        width: 1200px;
+    }
+
+
+}
+
+
+/* Exercicio */
+/* Crie uma nova media query para telas a partir de 822px, que faça as seguintes alterações 
+   - Tamanho geral de fonte: 20px
+   - Largura das colunas: 33.33%
+   - Limite o tamanho da container para até 1200 px
+   e também a centralize */
+
+
+
+</style>
+</head>
+<body>
+
+<div id="container">   
+    
+    <!-- Vamos criar um layout responsivo do zero -->
+    <!-- Cabeçalho  -->
+    <header>
+        <h1>Site XYZ</h1>
+        
+        <!-- navegação ou menu -->
+        <nav>
+            <a href="">link 1</a>
+            <a href="">link 2</a>
+            <a href="">link 3</a>
+        </nav>
+    
+    </header>    
+
+    <!-- conteúdo -->
+    <main>
+        <article id="coluna-um">
+            <h2>UM</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente sit consectetur quo optio veritatis dignissimos. Voluptas consequuntur ab eius nobis, dicta quia incidunt dolorem ipsam cumque facere obcaecati totam architecto magni consequatur perspiciatis expedita temporibus rerum. Temporibus illo debitis doloremque eveniet, nobis hic corporis tempora. Beatae dignissimos sed quas quod.</p>
+        </article>
+        
+        <article id="coluna-dois">
+            <h2>DOIS</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam, eos! Doloremque officiis incidunt rerum, ullam expedita quo eum quasi error, inventore fuga explicabo quod! Enim fugit excepturi voluptatem rerum labore dolore nemo voluptas eveniet, optio provident omnis aperiam possimus beatae perspiciatis voluptates assumenda similique illum ullam maxime nam dolores recusandae.</p>
+        </article>
+        
+        <article id="coluna-tres">
+            <h2>TRÊS</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt molestiae quisquam, iusto quibusdam perferendis porro? Omnis obcaecati vitae perspiciatis blanditiis perferendis eius animi exercitationem laboriosam vero dicta ducimus quasi quisquam veritatis, quia dolorum nesciunt excepturi amet, voluptates nisi, officia possimus veniam fugit. Dolorem ea dolorum laborum, ipsam blanditiis rem libero.</p>
+        </article>
+
+    </main>
+
+    <!-- rodapé -->
+    <footer>
+        <p>Layout de exemplo</p>
+    </footer>
+
+</div>     
+
+    
+</body>
+</html>

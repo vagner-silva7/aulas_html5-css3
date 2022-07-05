@@ -1,0 +1,113 @@
+/* regras css externo */
+
+
+/* seletor universal da pagina - digitar asteristico */
+/* Alterando o box model - width / height / padding / border para todos elementos da pagina */
+*, *::after, *::before { box-sizing: border-box; }
+
+/* Pseudo-elementos    ::after /  ::before */
+/* Permite adicional conteudo css dentro de um conteudo html */
+h2::after { content: ":)";}
+h2::before { content: ":(";}
+
+/* fixou a tela plano de fundo, para não rolar junto com a barra de rolagem da pagina */
+
+/*  seletor tag */
+body {
+    background-image: url(../imagens/tarde.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Alterar o plano de fundo ( rgba - background-color ) para tornar as letras mais nitidas na tag div id container no index.html */
+
+/*  seletor identificado / id */
+/*  atributo id só pode usar uma vez */
+
+#container {
+    background-color: rgba(255, 255, 255, 0.527);
+    width: 70%;
+    margin: auto;
+
+    /*  criar espaçamento e enchimento interno da div*/
+    padding: 15px;
+
+    /* Exercício */
+    /* 1) Colocar borda arredondada */
+    border-radius: 5%;
+
+    /* 2) Colocar sombra (cor - vertical - horizontal - esfumaçado) */
+    box-shadow: black 10px 10px 5px;
+}
+
+/* seletor tag de imagem para torna-las flexiveis */
+img { max-width: 100%;}
+
+
+h1 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
+    border-bottom: solid 5px;
+    font-size: 50px;
+}
+
+h2 { 
+    color: lightblue;
+    text-shadow: black 2px 2px 3px, 
+                black -1px -1px 3px;
+}
+
+
+/*  Seletor CLASSE */
+/*  seletor identificado / class */
+/*  atributo class pode usar varias vezes vezes */
+.centralizar { text-align: center; }
+.sombra-texto { text-shadow: black 3px 3px 4px;}
+.canto-arredondado { border-radius: 10px}
+.destaque {
+    background-color: yellow;
+    border:  solid 1px;
+    padding: 2px;
+}
+
+/* Seletor descendente*/
+/* Regra para formatação do texto, do link especifico */
+nav a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    
+    /* padding:    cima/baixo  esquerda/direita */
+    padding: 15px 30px;
+
+    /* tag em linha transformou em block */
+    display: inline-block;
+    width: 33.33%;
+
+    text-align: center;
+    
+}
+
+/* Regra de acionamento do link */
+/* Pseudo_classe :hover */
+
+nav a:hover {
+    background-color: darkblue;
+    color: yellow;
+}
+
+/* Regra de acionamento do figure */
+figure {
+    margin: 0;
+    text-align: center;
+}   
+
+
+figure img { filter: grayscale(100%);
+            transition: 2s;        
+}
+
+figure img:hover { filter: grayscale(0);}
